@@ -5,21 +5,32 @@ class square(Turtle):
         Turtle.__init__(self)
         self.shapesize(size)
         self.shape("square")
+        #extra1:
 
 #Q2:
-from turtle import Turtle
-class Hexagon(Turtle):
-    def __init__(self,size):
-        Turtle.__init__(self)
-        self.shapesize(size)
-        self.shape("hexagon")
+import turtle
 from turtle import *
-color('red', 'yellow')
-begin_fill()
-while True:
-    forward(200)
-    left(170)
-    if abs(pos()) < 1:
-        break
-end_fill()
-done()
+class Hexagon(Turtle):
+    def __init__(self,size,color,speed):
+        Turtle.__init__(self)
+        self.home()
+        self.color(color)
+        self.speed(speed)
+        self.begin_poly()
+        self.left(30)
+        self.fd(size)
+        self.left(60)
+        self.fd(size)
+        self.left(60)
+        self.fd(size)
+        self.left(60)
+        self.fd(size)
+        self.left(60)
+        self.fd(size)
+        self.left(60)
+        self.fd(size)
+        self.left(60)
+        self.end_poly()
+        Hexagon = self.get_poly()
+        register_shape("forat", Hexagon)
+        self.shape("forat")
