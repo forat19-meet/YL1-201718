@@ -34,3 +34,5 @@ class Hexagon(Turtle):
         Hexagon = self.get_poly()
         register_shape("forat", Hexagon)
         self.shape("forat")
+    def forward(self):
+        self.fd(200)
